@@ -1,6 +1,6 @@
 import yaml
 import os.path
-
+# 公共模块
 def get_datas():
     path = os.path.dirname(__file__) + "/task.yml"
     with open(path) as f:
