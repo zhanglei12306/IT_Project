@@ -1,7 +1,9 @@
 import yaml
+import os.path
 
 def get_datas():
-    with open("./task.yml") as f:
+    path = os.path.dirname(__file__) + "/task.yml"
+    with open(path) as f:
         datas = yaml.safe_load(f)
         # 获取文件中key为datas的数据
         add_datas = datas["datas"]
