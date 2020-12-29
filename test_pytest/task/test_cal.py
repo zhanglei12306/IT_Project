@@ -1,6 +1,6 @@
-from pythoncode.calculator import Calculator
+from test_pytest.pythoncode import Calculator
 import pytest
-from task.test_getdatas import get_datas
+from test_pytest.task.test_getdatas import get_datas
 # from task.log import logger
 
 class TestCalc:
