@@ -1,12 +1,9 @@
 import os
-import time
-
 import pytest
 import yaml
 from appium import webdriver
 from appium.webdriver.common.mobileby import MobileBy
 from hamcrest import *
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 def get_data():
@@ -73,7 +70,8 @@ class TestCase:
         self.driver.find_element(MobileBy.ID, "com.tencent.wework:id/ie7").click()
         ele = self.driver.find_element(MobileBy.XPATH, "//*[@class='android.widget.Toast']").text
         print(ele)
-        assert ele == '添加成功'
+        assert_that(ele, equal_to('添加成功'))
+
 
 
 
