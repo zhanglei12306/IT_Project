@@ -72,6 +72,7 @@ class TestCase:
         # 保存
         self.driver.find_element(MobileBy.ID, "com.tencent.wework:id/ie7").click()
         ele = self.driver.find_element(MobileBy.XPATH, "//*[@class='android.widget.Toast']").text
+        print(ele)
         assert ele == '添加成功'
 
 
