@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
 def get_data():
-    path = os.path.dirname(__file__) + "/task_data.yml"
+    path = os.path.dirname(__file__) + "/task_add_members.yml"
     with open(path, encoding='UTF-8') as f:
         datas = yaml.safe_load(f)
         print(datas)
