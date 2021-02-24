@@ -2,8 +2,8 @@ import requests
 class BasePage:
     def test_token(self):
         # 获取token
-        corp_id = 'wwd96e7d6fd6ae016d'
-        secret = 'KZxjtIppUrUaW488bW_LOD6RGPG8-VU6kjkvNh71xJM'
+        corp_id = 'wwd'
+        secret = 'KZxjtI'
         url = f'https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid={corp_id}&corpsecret={secret}'
         re = requests.get(url)
         if re.json()['errmsg'] == 'ok':
