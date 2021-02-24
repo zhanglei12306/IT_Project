@@ -1,5 +1,8 @@
+import json
+import base64
 import requests
 from jsonpath import jsonpath
+from requests.auth import HTTPBasicAuth
 '''
 get  ---> params
 post  ---> data
@@ -97,3 +100,16 @@ class TestRequests:
                         }
         r = requests.get(url= url, headers=head, cookies=cookies_data )
         print(r.request.headers)
+
+    def test_auth(self):
+        url = 'https://httpbin.testing-studio.com/basic-auth/banana/123'
+        r = requests.get(url= url, auth=HTTPBasicAuth('banana', '123'))
+        print(r.text)
+
+    def test_encod(self):
+        url = 'http://127.0.0.1:9999/demo.txt'
+        r = requests.get(url=url)
+        res = json.loads(base64.b64decode(r.content))
+        print(res)
+
+
