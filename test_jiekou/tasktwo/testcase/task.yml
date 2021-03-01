@@ -1,0 +1,14 @@
+
+
+create_members: [{ "userid": "lubandashi01",
+                   "name": "鲁fd师",
+                   "mobile": "+86 13800001500",
+                   "department": [ 1 ]}]
+
+read_members:
+  - '2'
+
+update_members: [{'userid':'2','name':'项羽6'}]
+
+delete_members:
+  - 'lubandashi004'
